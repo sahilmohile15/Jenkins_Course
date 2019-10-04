@@ -11,4 +11,14 @@ RUN apt-get install build-essential libssl-dev libffi-dev -y
 
 CMD ["echo", "Python has been installed successfully."]
 
+COPY ./requirements.txt /app/requirements.txt
+
+WORKDIR /app
+
+RUN pip install -r requirements.txt
+
+COPY . /app
+
+ENTRYPOINT [ "python" ]
+
 CMD ["python", "test-file.py"]
