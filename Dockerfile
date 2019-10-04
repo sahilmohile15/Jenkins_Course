@@ -20,6 +20,8 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT [ "python" ]
+CMD ["echo", $PATH]
+
+ENTRYPOINT [ "python3" ]
 
 CMD ["python", "test-file.py"]
