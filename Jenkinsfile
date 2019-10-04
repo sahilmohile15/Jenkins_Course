@@ -2,7 +2,7 @@ node{
 	stage('SCM Checkout'){
 		git credentialsId: 'admin', url: 'https://github.com/sahilmohile15/Jenkins_Course.git'
 	}
-	stage(mvn_package){
+	stage("mvn package"){
 		def mvnHome = tool name: 'maven-3', type: 'maven'
 		def mvnCmd = "${mvnHome}/bin/mvn"
 		sh "${mvnCmd} clean pakage"
