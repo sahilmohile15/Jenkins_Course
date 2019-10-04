@@ -15,6 +15,9 @@ node{
 	  }
     	  sh 'docker push sahilmohile15/test-app:1.0.0'
   	}
+	stage("Remove old Container"){
+		sh label: '', script: '''docker rm -f test-app'''
+	}
 	stage("Running Docker Image"){
 		sh "docker run --name test-app test-app"
 	}
