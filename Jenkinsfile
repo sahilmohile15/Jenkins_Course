@@ -7,7 +7,7 @@ node{
 	}
 	
 	stage("Build Docker Image"){
-		sh "docker build - < Dockerfile"
+		sh "docker build -t test-app ."
 	}
 	stage('Upload Image to DockerHub'){
      	        withCredentials([string(credentialsId: 'docker-pass', variable: 'docker-hub')]) {
