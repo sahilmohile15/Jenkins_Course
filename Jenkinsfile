@@ -10,9 +10,9 @@ node{
 		sh "docker build -t test-app ."
 	}
 	stage('Upload Image to DockerHub'){
-     	        withCredentials([string(credentialsId: 'docker-pass', variable: 'dockerhub')]) {
-			sh "docker login -u sahilmohile15 -p ${dockerhub}"
-    	  }
+		withCredentials([string(credentialsId: 'docker-pass', variable: 'dockerhub')]) {
+			sh "docker login -u sahilmohile15 -p 56?s4B83yN<G~&<Q"
+	  }
     	  sh 'docker push sahilmohile15/test-app:1.0.0'
   	}
 	stage("Running Docker Image"){
