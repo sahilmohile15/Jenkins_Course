@@ -4,6 +4,7 @@ FROM ubuntu
 CMD ["echo", "Installing required dependencies and packages...."]
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install python3-pip -y
+RUN apt-get install python-pip -y
 RUN apt-get install python3-dev -y
 RUN apt-get install python3-setuptools -y
 RUN apt-get install python3-venv -y
@@ -13,11 +14,11 @@ CMD ["echo", "Python has been installed successfully."]
 
 COPY ./requirements.txt /app/requirements.txt
 
-WORKDIR /app
+#WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-COPY . /app
+#COPY . /app
 
 ENTRYPOINT [ "python" ]
 
