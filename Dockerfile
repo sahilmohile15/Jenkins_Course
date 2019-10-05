@@ -3,7 +3,7 @@ FROM ubuntu
 
 
 CMD ["echo", "Installing required dependencies and packages...."]
-#RUN apt-get update && apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install python3-pip -y
 RUN apt-get install python-pip -y
 RUN apt-get install python3-dev -y
