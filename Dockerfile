@@ -13,7 +13,7 @@ RUN apt-get install build-essential libssl-dev libffi-dev -y
 
 CMD ["echo", "Python has been installed successfully."]
 # Adding python to path
-PATH="$PATH:/usr/local/bin/python"
+RUN PATH="$PATH:/usr/local/bin/python"
 
 COPY ./requirements.txt /app/requirements.txt
 
