@@ -24,4 +24,4 @@ CMD ["echo", $PATH]
 
 ENTRYPOINT [ "python" ]
 
-CMD ["python", "test-app.py"]
+CMD ["python3", "test-app.py"]
