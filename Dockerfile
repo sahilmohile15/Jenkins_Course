@@ -24,4 +24,4 @@ CMD ["echo", $PATH]
 
 ENTRYPOINT [ "python3" ]
 
-CMD ["python", "test-file.py"]
+RUN python test-app.py
