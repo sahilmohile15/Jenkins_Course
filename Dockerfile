@@ -22,6 +22,6 @@ COPY . /app
 
 CMD ["echo", $PATH]
 
-ENTRYPOINT [ "python3" ]
+ENTRYPOINT [ "python" ]
 
-RUN python test-app.py
+CMD ["python", "test-app.py"]
